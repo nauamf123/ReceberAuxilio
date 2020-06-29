@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7EEDBC"
+    tools:context=".TelaConferir">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="89dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="90dp"
+        android:text="ReceberAuxílio"
+        android:textColor="#080BCD"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cpf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/cpf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="81dp"
+        android:ems="10"
+        android:hint="CPF"
+        android:inputType="text"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/idade"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/renda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="35dp"
+        android:ems="10"
+        android:hint="RendaMensal"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/dataok"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idade" />
+
+    <Button
+        android:id="@+id/confirmar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="83dp"
+        android:text="Confirmar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dataok"
+        app:layout_constraintTop_toTopOf="@+id/dataok" />
+
+    <Button
+        android:id="@+id/dataok"
+        android:layout_width="117dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="170dp"
+        android:text="Data"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/confirmar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/renda" />
+
+    <TextView
+        android:id="@+id/data2"
+        android:layout_width="164dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="68dp"
+        android:text="Data"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/idade"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/idade" />
+
+    <TextView
+        android:id="@+id/idade"
+        android:layout_width="165dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="56dp"
+        android:text="Idade"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/renda"
+        app:layout_constraintEnd_toStartOf="@+id/data2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cpf" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
